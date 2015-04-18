@@ -10,7 +10,6 @@ repositories {
 	mavenCentral()
 }
 dependencies {
-	compile 'com.google.guava:guava:18.0'
 }
 task sourcesJar(type: Jar, dependsOn: classes) {
 	classifier = 'sources'
