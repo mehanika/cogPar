@@ -3,8 +3,8 @@ apply plugin: 'maven'
 
 group = 'com.github.mehanika'
 
-sourceCompatibility = 1.8 // java 8
-targetCompatibility = 1.8
+sourceCompatibility = JavaVersion.VERSION_1_6 
+targetCompatibility = JavaVersion.VERSION_1_6 
 
 repositories {
 	mavenCentral()
