@@ -1,0 +1,28 @@
+*.class
+*~
+# Package Files #
+.classpath
+.project
+
+*.jar
+*.war
+*.ear
+/.nb-gradle/private/
+/build
+#Netbeans folders
+bin/
+
+tmp/
+
+/private
+
+/null
+
+.gradle
+
+.settings/
+
+
+
+/.nb-gradle/profiles/private/
+
