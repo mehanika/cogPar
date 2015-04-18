@@ -1,35 +1,22 @@
 apply plugin: 'java'
-apply plugin: 'eclipse'
 apply plugin: 'maven'
 
-sourceCompatibility = 1.5
-version = '1.0'
-jar {
-    manifest {
-        attributes 'Implementation-Title': 'Gradle Quickstart', 'Implementation-Version': version
-    }
-}
+group = 'com.github.mehanika'
+
+sourceCompatibility = 1.8 // java 8
+targetCompatibility = 1.8
 
 repositories {
-    mavenCentral()
+	mavenCentral()
 }
-
 dependencies {
-    compile group: 'commons-collections', name: 'commons-collections', version: '3.2'
-    testCompile group: 'junit', name: 'junit', version: '4.+'
+	compile 'com.google.guava:guava:18.0'
+}
+task sourcesJar(type: Jar, dependsOn: classes) {
+	classifier = 'sources'
+	from sourceSets.main.allSource
 }
 
-test {
-    systemProperties 'property': 'value'
-}
-
-group = 'uk.co.cogitolearning.cogpar'
-version = '0.1.1'
-
-uploadArchives {
-    repositories {
-       flatDir {
-           dirs 'repos'
-       }
-    }
+artifacts {
+	archives sourcesJar
 }
